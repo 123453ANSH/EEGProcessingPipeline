@@ -1,0 +1,27 @@
+% when need to put semicolons
+%how come no more NaN is being showed for rows 25/26
+%b = transpose(dataArray{1,25});
+LiveMarker = dataArray{1,25};
+%by looking for in excel, it seems that there is nothing there either? 
+%25 COLLUMNS EXCEL, 26 HERE? 
+%worry about this later, from excel u know there are contents in there, so
+%this is second priority
+
+
+LiveMarkerIndex = [];
+LiveMarkerLen = length(LiveMarker); %makes sense that they are all a similar size in length
+% ! is not opposite in matlab
+%cell strings vs strings - difference
+%curly brace indexing vs ()?
+ = LiveMarker{1}  %assuming first string is always NaN
+% the whole bottom system is stupid since we want the markers to aline with
+% time
+for i=1:LiveMarkerLen
+   bob =strcmp(LiveMarker{i},gg); % when compare two normal strings with eachother, its fine, but when compare itteration to itself, false
+    if bob == false% do not need any specific symbol after this to indicate control structure %didnt like use of ! before
+        %disp('yay'); % didnt even come in here once! 
+        LiveMarkerIndex = [LiveMarkerIndex;i]; % only way ive seen to do this 
+        %look @ screenshot, it does stop
+    end 
+end
+%end is necessary syntax for loops matlab

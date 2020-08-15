@@ -1,0 +1,6 @@
+r = length(dataArray)
+newArray = []
+for i=1:r
+    g = transpose(dataArray{1,i});
+    newArray =  [newArray;g];  %input arrays need to be same consistency? 
+end
